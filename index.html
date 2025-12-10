@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Store</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="assets/logo.png" alt="image" />
+      <nav class="navigation">
+        <a href="#welcome">Home</a>
+        <a href="#aboutUs">About</a>
+        <a href="#featuredBooks">Featured</a>
+        <a href="#newArrivals">Arrivals</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#ourBlog">Blog</a>
+      </nav>
+
+      <i onclick="showSidebar()" class="fa-solid fa-bars menuButton"></i>
+      <nav class="sidebar">
+        <i onclick="hideSidebar()" class="fa-solid fa-xmark"></i>
+        <a onclick="hideSidebar()" href="#welcome">Home</a>
+        <a onclick="hideSidebar()" href="#aboutUs">About</a>
+        <a onclick="hideSidebar()" href="#featuredBooks">Featured</a>
+        <a onclick="hideSidebar()" href="#newArrivals">Arrivals</a>
+        <a onclick="hideSidebar()" href="#reviews">Reviews</a>
+        <a onclick="hideSidebar()" href="#ourBlog">Blog</a>
+      </nav>
+
+      <div class="searchFavThemeIcon">
+        <input type="text" id="searchInput" placeholder="Search" />
+        <i id="searchBtn" class="fa-solid fa-magnifying-glass"></i>
+        <label for="colorPicker">
+          <i class="fa-solid fa-palette"></i>
+        </label>
+        <input type="color" id="colorPicker" value="#089da1" />
+        <i onclick="toggleTheme()" class="fa-solid fa-circle-half-stroke"></i>
+      </div>
+    </header>
+
+    <div id="container">
+      <div id="welcome">
+        <div class="items" id="welcomeSection1">
+          <div id="welcomeTitle">
+            <p>Welcome To</p>
+            <p id="welcomeTitleColored">Book Store</p>
+          </div>
+          <p id="welcomeText">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum
+            numquam aliquid quam, animi, non obcaecati fugiat ut aut esse fuga
+            dolor doloremque est enim exercitationem assumenda quisquam, impedit
+            molestias libero.
+          </p>
+          <button>Learn More</button>
+        </div>
+        <div class="items" id="welcomeSection2">
+          <img id="table-img" src="assets/table.png" alt="image" />
+        </div>
+      </div>
+      <div id="services">
+        <div class="service">
+          <i class="fa-solid fa-truck-fast"></i>
+          <h2>Fast Delivery</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="service">
+          <i class="fa-solid fa-headset"></i>
+          <h2>24 x 7 Services</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="service">
+          <i class="fa-solid fa-tag"></i>
+          <h2>Best Deal</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div id="securePayment" class="service">
+          <i class="fa-solid fa-lock"></i>
+          <h2>Secure Payment</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+      </div>
+      <div id="aboutUs">
+        <div class="aboutUsImage">
+          <img src="assets/about.png" width="100%" alt="" />
+        </div>
+        <div class="aboutUsText">
+          <h1>About Us</h1>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+            explicabo deserunt perferendis hic, optio blanditiis eum rerum saepe
+            magni, natus iste ipsum doloremque ducimus? Exercitationem ipsum
+            cupiditate dignissimos quos, nobis voluptatibus impedit. Et ut
+            possimus nihil fugiat at nulla error quis omnis sapiente expedita
+            nesciunt excepturi harum recusandae molestiae dolorem repellat quas,
+            unde earum. Unde, qui. Exercitationem consequatur quia voluptatem
+            quasi omnis earum, ipsa at repellendus. Optio sunt praesentium
+            veritatis ratione harum nobis natus assumenda.
+          </p>
+          <button class="aboutUsBtn" type="submit">Learn More</button>
+        </div>
+      </div>
+      <div id="featuredBooks">
+        <h1>Featured Books</h1>
+        <div id="scrollableContainer">
+          <div class="bookContainer">
+            <img class="bookCover" src="assets/book_1.jpg" alt="image" />
+            <h2>Featured Books</h2>
+            <p class="authorName">John Deo</p>
+            <p class="bookType">Thriller, Horror, Romance</p>
+            <div class="discount">
+              <p>
+                $25.50 <sub><del>$28.60</del></sub>
+              </p>
+            </div>
+            <button class="buttonNoBackground">Learn More</button>
+          </div>
+          <div class="bookContainer">
+            <img class="bookCover" src="assets/book_2.jpg" alt="image" />
+            <h2>Featured Books</h2>
+            <p class="authorName">John Deo</p>
+            <p class="bookType">Thriller, Horror, Romance</p>
+            <div class="discount">
+              <p>
+                $25.50 <sub><del>$28.60</del></sub>
+              </p>
+            </div>
+            <button class="buttonNoBackground">Learn More</button>
+          </div>
+          <div class="bookContainer">
+            <img class="bookCover" src="assets/book_3.jpg" alt="image" />
+            <h2>Featured Books</h2>
+            <p class="authorName">John Deo</p>
+            <p class="bookType">Thriller, Horror, Romance</p>
+            <div class="discount">
+              <p>
+                $25.50 <sub><del>$28.60</del></sub>
+              </p>
+            </div>
+            <button class="buttonNoBackground">Learn More</button>
+          </div>
+          <div class="bookContainer">
+            <img class="bookCover" src="assets/book_4.jpg" alt="image" />
+            <h2>Featured Books</h2>
+            <p class="authorName">John Deo</p>
+            <p class="bookType">Thriller, Horror, Romance</p>
+            <div class="discount">
+              <p>
+                $25.50 <sub><del>$28.60</del></sub>
+              </p>
+            </div>
+            <button class="buttonNoBackground">Learn More</button>
+          </div>
+          <div class="bookContainer">
+            <img class="bookCover" src="assets/book_5.jpg" alt="image" />
+            <h2>Featured Books</h2>
+            <p class="authorName">John Deo</p>
+            <p class="bookType">Thriller, Horror, Romance</p>
+            <div class="discount">
+              <p>
+                $25.50 <sub><del>$28.60</del></sub>
+              </p>
+            </div>
+            <button class="buttonNoBackground">Learn More</button>
+          </div>
+          <div class="bookContainer">
+            <img class="bookCover" src="assets/book_6.jpg" alt="image" />
+            <h2>Featured Books</h2>
+            <p class="authorName">John Deo</p>
+            <p class="bookType">Thriller, Horror, Romance</p>
+            <div class="discount">
+              <p>
+                $25.50 <sub><del>$28.60</del></sub>
+              </p>
+            </div>
+            <button class="buttonNoBackground">Learn More</button>
+          </div>
+          <div class="bookContainer">
+            <img class="bookCover" src="assets/book_7.png" alt="image" />
+            <h2>Featured Books</h2>
+            <p class="authorName">John Deo</p>
+            <p class="bookType">Thriller, Horror, Romance</p>
+            <div class="discount">
+              <p>
+                $25.50 <sub><del>$28.60</del></sub>
+              </p>
+            </div>
+            <button class="buttonNoBackground">Learn More</button>
+          </div>
+          <div class="bookContainer">
+            <img class="bookCover" src="assets/book_8.png" alt="image" />
+            <h2>Featured Books</h2>
+            <p class="authorName">John Deo</p>
+            <p class="bookType">Thriller, Horror, Romance</p>
+            <div class="discount">
+              <p>
+                $25.50 <sub><del>$28.60</del></sub>
+              </p>
+            </div>
+            <button class="buttonNoBackground">Learn More</button>
+          </div>
+          <div class="bookContainer">
+            <img class="bookCover" src="assets/book_9.jpg" alt="image" />
+            <h2>Featured Books</h2>
+            <p class="authorName">John Deo</p>
+            <p class="bookType">Thriller, Horror, Romance</p>
+            <div class="discount">
+              <p>
+                $25.50 <sub><del>$28.60</del></sub>
+              </p>
+            </div>
+            <button class="buttonNoBackground">Learn More</button>
+          </div>
+          <div class="bookContainer">
+            <img class="bookCover" src="assets/book_10.png" alt="image" />
+            <h2>Featured Books</h2>
+            <p class="authorName">John Deo</p>
+            <p class="bookType">Thriller, Horror, Romance</p>
+            <div class="discount">
+              <p>
+                $25.50 <sub><del>$28.60</del></sub>
+              </p>
+            </div>
+            <button class="buttonNoBackground">Learn More</button>
+          </div>
+          <div class="bookContainer">
+            <img class="bookCover" src="assets/book_11.jpg" alt="image" />
+            <h2>Featured Books</h2>
+            <p class="authorName">John Deo</p>
+            <p class="bookType">Thriller, Horror, Romance</p>
+            <div class="discount">
+              <p>
+                $25.50 <sub><del>$28.60</del></sub>
+              </p>
+            </div>
+            <button class="buttonNoBackground">Learn More</button>
+          </div>
+          <div class="bookContainer">
+            <img class="bookCover" src="assets/book_12.png" alt="image" />
+            <h2>Featured Books</h2>
+            <p class="authorName">John Deo</p>
+            <p class="bookType">Thriller, Horror, Romance</p>
+            <div class="discount">
+              <p>
+                $25.50 <sub><del>$28.60</del></sub>
+              </p>
+            </div>
+            <button class="buttonNoBackground">Learn More</button>
+          </div>
+          <div class="bookContainer">
+            <img class="bookCover" src="assets/book_13.png" alt="image" />
+            <h2>Featured Books</h2>
+            <p class="authorName">John Deo</p>
+            <p class="bookType">Thriller, Horror, Romance</p>
+            <div class="discount">
+              <p>
+                $25.50 <sub><del>$28.60</del></sub>
+              </p>
+            </div>
+            <button class="buttonNoBackground">Learn More</button>
+          </div>
+          <div class="bookContainer">
+            <img class="bookCover" src="assets/book_14.png" alt="image" />
+            <h2>Featured Books</h2>
+            <p class="authorName">John Deo</p>
+            <p class="bookType">Thriller, Horror, Romance</p>
+            <div class="discount">
+              <p>
+                $25.50 <sub><del>$28.60</del></sub>
+              </p>
+            </div>
+            <button class="buttonNoBackground">Learn More</button>
+          </div>
+          <div class="bookContainer">
+            <img class="bookCover" src="assets/book_15.png" alt="image" />
+            <h2>Featured Books</h2>
+            <p class="authorName">John Deo</p>
+            <p class="bookType">Thriller, Horror, Romance</p>
+            <div class="discount">
+              <p>
+                $25.50 <sub><del>$28.60</del></sub>
+              </p>
+            </div>
+            <button class="buttonNoBackground">Learn More</button>
+          </div>
+        </div>
+      </div>
+      <div id="newArrivals">
+        <h1>New Arrivals</h1>
+        <div class="newArrivalsCardsContainer">
+          <div class="newArrivalsCard">
+            <div class="cardImage">
+              <img
+                src="assets/arrival_1.jpg"
+                height="100%"
+                width="100%"
+                alt=""
+              />
+            </div>
+            <p>New Arrivals</p>
+            <div class="cardStars">
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star-half-stroke starColor"></i>
+            </div>
+            <button class="buttonNoBackground" type="button">Learn More</button>
+          </div>
+
+          <div class="newArrivalsCard">
+            <div class="cardImage">
+              <img
+                src="assets/arrival_2.jpg"
+                height="100%"
+                width="100%"
+                alt=""
+              />
+            </div>
+            <p>New Arrivals</p>
+            <div class="cardStars">
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star-half-stroke starColor"></i>
+            </div>
+            <button class="buttonNoBackground" type="button">Learn More</button>
+          </div>
+
+          <div class="newArrivalsCard">
+            <div class="cardImage">
+              <img
+                src="assets/arrival_3.jpg"
+                height="100%"
+                width="100%"
+                alt=""
+              />
+            </div>
+            <p>New Arrivals</p>
+            <div class="cardStars">
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star-half-stroke starColor"></i>
+            </div>
+            <button class="buttonNoBackground" type="button">Learn More</button>
+          </div>
+
+          <div class="newArrivalsCard">
+            <div class="cardImage">
+              <img
+                src="assets/arrival_4.jpg"
+                height="100%"
+                width="100%"
+                alt=""
+              />
+            </div>
+            <p>New Arrivals</p>
+            <div class="cardStars">
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star-half-stroke starColor"></i>
+            </div>
+            <button class="buttonNoBackground" type="button">Learn More</button>
+          </div>
+
+          <div class="newArrivalsCard">
+            <div class="cardImage">
+              <img
+                src="assets/arrival_5.jpg"
+                height="100%"
+                width="100%"
+                alt=""
+              />
+            </div>
+            <p>New Arrivals</p>
+            <div class="cardStars">
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+
+              <i class="fa-solid fa-star-half-stroke starColor"></i>
+            </div>
+            <button class="buttonNoBackground" type="button">Learn More</button>
+          </div>
+
+          <div class="newArrivalsCard">
+            <div class="cardImage">
+              <img
+                src="assets/arrival_6.jpg"
+                height="100%"
+                width="100%"
+                alt=""
+              />
+            </div>
+            <p>New Arrivals</p>
+            <div class="cardStars">
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star-half-stroke starColor"></i>
+            </div>
+            <button class="buttonNoBackground" type="button">Learn More</button>
+          </div>
+
+          <div class="newArrivalsCard">
+            <div class="cardImage">
+              <img
+                src="assets/arrival_7.jpg"
+                height="100%"
+                width="100%"
+                alt=""
+              />
+            </div>
+            <p>New Arrivals</p>
+            <div class="cardStars">
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star-half-stroke starColor"></i>
+            </div>
+            <button class="buttonNoBackground" type="button">Learn More</button>
+          </div>
+
+          <div class="newArrivalsCard">
+            <div class="cardImage">
+              <img
+                src="assets/arrival_8.webp"
+                height="100%"
+                width="100%"
+                alt=""
+              />
+            </div>
+            <p>New Arrivals</p>
+            <div class="cardStars">
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star-half-stroke starColor"></i>
+            </div>
+            <button class="buttonNoBackground" type="button">Learn More</button>
+          </div>
+
+          <div class="newArrivalsCard">
+            <div class="cardImage">
+              <img
+                src="assets/arrival_9.jpg"
+                height="100%"
+                width="100%"
+                alt=""
+              />
+            </div>
+            <p>New Arrivals</p>
+            <div class="cardStars">
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star-half-stroke starColor"></i>
+            </div>
+            <button class="buttonNoBackground" type="button">Learn More</button>
+          </div>
+
+          <div class="newArrivalsCard">
+            <div class="cardImage">
+              <img
+                src="assets/arrival_10.jpg"
+                height="100%"
+                width="100%"
+                alt=""
+              />
+            </div>
+            <p>New Arrivals</p>
+            <div class="cardStars">
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star starColor"></i>
+              <i class="fa-solid fa-star-half-stroke starColor"></i>
+            </div>
+            <button class="buttonNoBackground" type="button">Learn More</button>
+          </div>
+        </div>
+      </div>
+      <div id="reviews">
+        <h1>Reviews</h1>
+        <div class="reviewsCardsContainer">
+          <div class="reviewsCard">
+            <div class="cardTop">
+              <div class="reviewAutherInfo">
+                <img src="assets/review_1.png" width="60px" alt="" />
+                <h3 class="autherName">John Deo</h3>
+              </div>
+              <div class="quotation">
+                <i class="fa-solid fa-quote-right"></i>
+              </div>
+            </div>
+            <div class="cardBottom">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Possimus consectetur, recusandae vel minus porro dolorum rerum
+                libero iusto minima architecto praesentium nulla magni magnam
+                cupiditate reprehenderit vitae placeat doloribus repudiandae.
+              </p>
+              <div class="cardStars">
+                <i class="fa-solid fa-star starColor"></i>
+                <i class="fa-solid fa-star starColor"></i>
+                <i class="fa-solid fa-star starColor"></i>
+                <i class="fa-solid fa-star starColor"></i>
+                <i class="fa-solid fa-star-half-stroke starColor"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="reviewsCard">
+            <div class="cardTop">
+              <div class="reviewAutherInfo">
+                <img src="assets/review_2.png" width="60px" alt="" />
+                <h3 class="autherName">John Deo</h3>
+              </div>
+              <div class="quotation">
+                <i class="fa-solid fa-quote-right"></i>
+              </div>
+            </div>
+            <div class="cardBottom">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Possimus consectetur, recusandae vel minus porro dolorum rerum
+                libero iusto minima architecto praesentium nulla magni magnam
+                cupiditate reprehenderit vitae placeat doloribus repudiandae.
+              </p>
+              <div class="cardStars">
+                <i class="fa-solid fa-star starColor"></i>
+                <i class="fa-solid fa-star starColor"></i>
+                <i class="fa-solid fa-star starColor"></i>
+                <i class="fa-solid fa-star starColor"></i>
+                <i class="fa-solid fa-star-half-stroke starColor"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="reviewsCard">
+            <div class="cardTop">
+              <div class="reviewAutherInfo">
+                <img src="assets/review_3.png" width="60px" alt="" />
+                <h3 class="autherName">John Deo</h3>
+              </div>
+              <div class="quotation">
+                <i class="fa-solid fa-quote-right"></i>
+              </div>
+            </div>
+            <div class="cardBottom">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Possimus consectetur, recusandae vel minus porro dolorum rerum
+                libero iusto minima architecto praesentium nulla magni magnam
+                cupiditate reprehenderit vitae placeat doloribus repudiandae.
+              </p>
+              <div class="cardStars">
+                <i class="fa-solid fa-star starColor"></i>
+                <i class="fa-solid fa-star starColor"></i>
+                <i class="fa-solid fa-star starColor"></i>
+                <i class="fa-solid fa-star starColor"></i>
+                <i class="fa-solid fa-star-half-stroke starColor"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="reviewsCard">
+            <div class="cardTop">
+              <div class="reviewAutherInfo">
+                <img src="assets/review_4.png" width="60px" alt="" />
+                <h3 class="autherName">John Deo</h3>
+              </div>
+              <div class="quotation">
+                <i class="fa-solid fa-quote-right"></i>
+              </div>
+            </div>
+            <div class="cardBottom">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Possimus consectetur, recusandae vel minus porro dolorum rerum
+                libero iusto minima architecto praesentium nulla magni magnam
+                cupiditate reprehenderit vitae placeat doloribus repudiandae.
+              </p>
+              <div class="cardStars">
+                <i class="fa-solid fa-star starColor"></i>
+                <i class="fa-solid fa-star starColor"></i>
+                <i class="fa-solid fa-star starColor"></i>
+                <i class="fa-solid fa-star starColor"></i>
+                <i class="fa-solid fa-star-half-stroke starColor"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="banner">
+        <button>Learn More</button>
+      </div>
+      <div id="ourBlog">
+        <h1>Our Blog</h1>
+        <div class="ourBlogCardsContainer">
+          <div class="ourBlogCard">
+            <div class="blogCardImage">
+              <img src="assets/blog_1.jpg" height="100%" width="100%" alt="" />
+            </div>
+            <div class="blogCardText">
+              <h3>Bloger</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+                magnam aut culpa, cupiditate vel quam aperiam similique illo
+                quaerat quia, facere debitis voluptatibus? Eveniet vitae
+                cupiditate ullam at rerum autem harum in assumenda quasi illo.
+              </p>
+              <div class="blogIcons">
+                <div class="calenderIcon">
+                  <i class="fa-solid fa-calendar-days"></i>
+                </div>
+                <div class="heartIcon"><i class="fa-solid fa-heart"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ourBlogCard">
+            <div class="blogCardImage">
+              <img src="assets/blog_2.jpg" height="100%" width="100%" alt="" />
+            </div>
+            <div class="blogCardText">
+              <h3>Bloger</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+                magnam aut culpa, cupiditate vel quam aperiam similique illo
+                quaerat quia, facere debitis voluptatibus? Eveniet vitae
+                cupiditate ullam at rerum autem harum in assumenda quasi illo.
+              </p>
+              <div class="blogIcons">
+                <div class="calenderIcon">
+                  <i class="fa-solid fa-calendar-days"></i>
+                </div>
+                <div class="heartIcon"><i class="fa-solid fa-heart"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ourBlogCard">
+            <div class="blogCardImage">
+              <img src="assets/blog_3.jpg" height="100%" width="100%" alt="" />
+            </div>
+            <div class="blogCardText">
+              <h3>Bloger</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+                magnam aut culpa, cupiditate vel quam aperiam similique illo
+                quaerat quia, facere debitis voluptatibus? Eveniet vitae
+                cupiditate ullam at rerum autem harum in assumenda quasi illo.
+              </p>
+              <div class="blogIcons">
+                <div class="calenderIcon">
+                  <i class="fa-solid fa-calendar-days"></i>
+                </div>
+                <div class="heartIcon"><i class="fa-solid fa-heart"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     <footer>
+        <div id="footerTopSection">
+          <div class="box" id="footersLogoText">
+            <img src="assets/logo.png" alt="image" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+              adipisci inventore ipsa velit neque maiores minus dicta quidem
+              nulla quia rem, natus id praesentium ullam. Animi, laboriosam
+              exercitationem. Sunt, dicta.
+            </p>
+          </div>
+          <div class="box" id="quickLink">
+            <h2>Quick Link</h2>
+            <a href="#welcome">Home</a>
+            <a href="#aboutUs">About</a>
+            <a href="#featuredBooks">Featured</a>
+            <a href="#newArrivals">Arrivals</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#ourBlog">Blog</a>
+          </div>
+          <div class="box" id="contactInfo">
+            <h2>Contact Info</h2>
+            <div class="contactBox">
+              <i class="fa-solid fa-phone"></i>
+              <p>+94 12 345 6789</p>
+            </div>
+            <div class="contactBox">
+              <i class="fa-solid fa-phone"></i>
+              <p>+94 32 444 699</p>
+            </div>
+            <div class="contactBox">
+              <i class="fa-solid fa-envelope"></i>
+              <p>bookstore123@gmail.com</p>
+            </div>
+          </div>
+          <div class="box" id="followUs">
+            <h2>Follow Us</h2>
+            <a href="https://en.wikipedia.org/wiki/Facebook" target="_blank">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Instagram" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Twitter" target="_blank">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://en.wikipedia.org/wiki/LinkedIn" target="_blank">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </div>
+          <div class="box" id="newsletter">
+            <h2>Newsltter</h2>
+            <input type="text" placeholder="Your email id here" />
+            <button>Subscribe</button>
+          </div>
+        </div>
+        <div id="footerBottomSection">
+          <div id="webAuthor">
+            <p>
+              Design By <i class="fa-solid fa-face-grin"></i
+              ><span> adeeb khanfar mohamad ibrahem</span>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const searchBtn = document.getElementById("searchBtn");
+        const searchInput = document.getElementById("searchInput");
+        const context = document.querySelector("#container");
+        const markInstance = new Mark(context);
+        let inputVisible = false;
+
+        searchBtn.addEventListener("click", () => {
+          if (!inputVisible) {
+            searchInput.classList.add("visible");
+            searchInput.focus();
+            inputVisible = true;
+          } else {
+            searchInput.classList.remove("visible");
+            inputVisible = false;
+          }
+        });
+
+        searchInput.addEventListener("keydown", (event) => {
+          if (event.key === "Enter") {
+            const searchTerm = searchInput.value.trim();
+            if (!searchTerm) {
+              markInstance.unmark();
+              return;
+            }
+
+            markInstance.unmark({
+              done: () => {
+                markInstance.mark(searchTerm);
+              },
+            });
+          }
+        });
+      });
+
+      const colorPicker = document.getElementById("colorPicker");
+      const icon = document.querySelector(".color-icon");
+
+      colorPicker.addEventListener("input", (e) => {
+        const color = e.target.value;
+        document.documentElement.style.setProperty("--primary-color", color);
+        icon.style.color = color;
+      });
+
+      function showSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "flex";
+      }
+      function hideSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "none";
+      }
+
+      function toggleTheme() {
+        document.body.classList.toggle("dark");
+      }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
+  </body>
+</html>
